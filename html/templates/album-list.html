@@ -1,0 +1,15 @@
+<div class="row row-cols-xxl-4 row-cols-xl-3 row-cols-lg-3 row-cols-md-2">
+    {{range .}}
+      <div class="col">
+        <div class="card shadow">
+          <img src="{{.AlbumImg}}" class="card-img-top card-image bg-dark" alt="Обложка альбома">
+          <div class="card-body">
+            <h4 class="card-title overflow-hidden"><span class="album-counter">{{.AlbumTitleComment}} </span>{{.AlbumTitle}}</h4>
+            <p class="card-text overflow-auto">{{.AlbumDescription}}</p>
+            <a href="#" role="button" data-href="gallery?album={{.AlbumPath}}" class="btn btn-dark card-btn shadow" data-bs-toggle="modal" data-bs-target="#myModal">В окне</a>
+            <a href="javascript:void(0);" role="button" onclick="OpenGallery('gallery?album={{.AlbumPath}}');" class="btn btn-dark card-btn shadow">На странице</a>
+          </div>
+        </div>
+      </div>
+    {{end}}
+</div>

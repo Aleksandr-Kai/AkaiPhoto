@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      {{template "header"}}      
+    </head>
+    
+    <body>
+        {{template "navbar" .}}
+        <br>
+        <div id="modals">
+
+        </div>
+        {{template "login-modal"}}
+        <!------------------------------------------------------------------------------------------>
+        <div class="modal fade" id="myModal" role="dialog">
+          <div class="modal-dialog modal-xl modal-dialog-scrollable">
+          
+              <!-- Modal content-->
+              <div class="modal-content">
+                  <div class="modal-header">
+                    <div class="container-fluid">
+                      <div class="container" style="width: 20%; float: left; /*border: 1px solid  rgb(255, 0, 0);*/">
+                        <h1 class="photologo">Photo</h1>
+                      </div>
+                      <div class="container-fluid" style="width: 80%; float: right; overflow: hidden; /*border: 1px solid rgb(0, 4, 255);*/">
+                        <h1 class="album-title" id="modal-title"></h1>
+                      </div>
+                    </div>
+                    <!--button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button-->
+                  </div>
+                  <div class="modal-body" id="view-album-body">
+      
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                  </div>
+              </div>
+            
+          </div>
+        </div>
+        <div class="container album-list bg-light rounded shadow">
+          
+        </div>
+        {{template "footer"}}        
+    </body>
+</html>
